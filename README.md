@@ -1,124 +1,19 @@
-# 17 Septemeber - 31 December (105 days)
+# Progress Report
 
-## Goals
-- get comfortable in writing js and ts web apps using node.js, next.js, and integrating databases mainly sql databases like postgres, mysql and also mongodb.
-- learn ways to write secure code with rate limiting and common vulnerability problems solution.
-- get comfortable with python to use langchain and other gen ai tools to integrate with web apps.
-- learn devops principles from cohort mainly docker, kubernetes and other tools and deploying on aws.
+## Week 01 ( 17 Sept - 23 Sept )
 
-## Current Situation
-- need to learn typescript
-- need to learn next.js
-- need to learn tailwind
-- need to learn writing full backend in nodejs
-- need to learn python
-- need to learn using databases and connecting them
-- need to learn deployments on cloud
+- [x] Completed HTML lectures (18 Sept)
+- [x] Completed basic CSS (18 Sept)
+- [ ] Complete CSS
+- [ ] Complete Tailwind CSS
 
-## Progress Report
-- 17 Sept:
-- 18 Sept:
-- 19 Sept:
-- 20 Sept:
-- 21 Sept:
-- 22 Sept:
-- 23 Sept:
-- 24 Sept:
-- 25 Sept:
-- 26 Sept:
-- 27 Sept:
-- 28 Sept:
-- 29 Sept:
-- 30 Sept:
-- 1 Oct:
-- 2 Oct:
-- 3 Oct:
-- 4 Oct:
-- 5 Oct:
-- 6 Oct:
-- 7 Oct:
-- 8 Oct:
-- 9 Oct:
-- 10 Oct:
-- 11 Oct:
-- 12 Oct:
-- 13 Oct:
-- 14 Oct:
-- 15 Oct:
-- 16 Oct:
-- 17 Oct:
-- 18 Oct:
-- 19 Oct:
-- 20 Oct:
-- 21 Oct:
-- 22 Oct:
-- 23 Oct:
-- 24 Oct:
-- 25 Oct:
-- 26 Oct:
-- 27 Oct:
-- 28 Oct:
-- 29 Oct:
-- 30 Oct:
-- 31 Oct:
-- 1 Nov:
-- 2 Nov:
-- 3 Nov:
-- 4 Nov:
-- 5 Nov:
-- 6 Nov:
-- 7 Nov:
-- 8 Nov:
-- 9 Nov:
-- 10 Nov:
-- 11 Nov:
-- 12 Nov:
-- 13 Nov:
-- 14 Nov:
-- 15 Nov:
-- 16 Nov:
-- 17 Nov:
-- 18 Nov:
-- 19 Nov:
-- 20 Nov:
-- 21 Nov:
-- 22 Nov:
-- 23 Nov:
-- 24 Nov:
-- 25 Nov:
-- 26 Nov:
-- 27 Nov:
-- 28 Nov:
-- 29 Nov:
-- 30 Nov:
-- 1 Dec:
-- 2 Dec:
-- 3 Dec:
-- 4 Dec:
-- 5 Dec:
-- 6 Dec:
-- 7 Dec:
-- 8 Dec:
-- 9 Dec:
-- 10 Dec:
-- 11 Dec:
-- 12 Dec:
-- 13 Dec:
-- 14 Dec:
-- 15 Dec:
-- 16 Dec:
-- 17 Dec:
-- 18 Dec:
-- 19 Dec:
-- 20 Dec:
-- 21 Dec:
-- 22 Dec:
-- 23 Dec:
-- 24 Dec:
-- 25 Dec:
-- 26 Dec:
-- 27 Dec:
-- 28 Dec:
-- 29 Dec:
-- 30 Dec:
-- 31 Dec:
+## Week 02 ( 24 Sept - 30 Sept )
+
+- [ ] Complete Javascript
+- [ ] Complete git and github
+
+## Week 03 ( 1 Oct - 7 Oct )
+
+- [ ] Complete Backend with Node.js and Projects
+- [ ] Complete Introduction to Databases
+- [ ] Complete Building a complete Backend
