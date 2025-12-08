@@ -52,20 +52,48 @@
 52. What is the comma opeartor and what it does ? give me one example where it's used ? why we shouldn't use it ?
 53. let a = 1, b = 1; let c = ++a; let d = b++; final value of a,b,c,d ?
 54. let a = 2; let x = 1 + (a \*= 2); values of a and x ?
-55. "" + 1 + 0;
-    "" - 1 + 0;
-    true + false;
-    6 / "3";
-    "2" \* "3";
-    4 + 5 + "px";
-    "$" + 4 + 5;
-    "4" - 2;
-    "4px" - 2;
-    " -9 " + 5;
-    " -9 " - 5;
-    null + 1;
-    undefined + 1;
-    " \t \n" - 2
+55. "" + 1 + 0; "" - 1 + 0; true + false; 6 / "3"; "2" \* "3"; 4 + 5 + "px"; "$" + 4 + 5; "4" - 2; "4px" - 2; " -9 " + 5; " -9 " - 5; null + 1; undefined + 1; " \t \n" - 2
 give the result of each expression.
 56. let a = prompt("First number?", 1); let b = prompt("Second number?", 2); alert(a + b); // 12 why this code gives 12 and not 3 ? fix this. 
+57. What are comparisons operator in js, list them all ?
+58. What's the differnce between = and == in js ?
+59. How string comparisons work, how js decides which string is bigger and which is small ?
+60. Which is greater "a" or "A" in js ?
+61. What if we compare string and number using comparison operators ?
+62. What is the numerical value of true and false ?
+63. What is the problem with == and === ?
+64. What is the strict non equality operator and it's use ?
+65. What if we compre null and zero using <, >, ==. What would be the result in each case ?
+66. Why the value undefined shoudn't be compared to other values ?
+67. What comparison operatos return ?
+68. Is null and undefined equal, if yes why so ?
+69. 5 > 4; "apple" > "pineapple"; "2" > "12"; undefined == null; undefined === null; null == "\n0\n"; null === +"\n0\n"; give result of each. 
+70. What are logical operators in js ? How many, List them all.
+71. Are the logical operators only applied to booleans ?
+72. What do you mean by short circuit evaluation ? give example.
+73. Whose precedence is higher || or && ?
+74. How the ! operator work ?
+75. When !! double not is used ?
+76. What will it return and explain why alert( alert(1) || 2 || alert(3) );
+77. What will it return and explain why alert( alert(1) && alert(2) );
+78. What will it reuturn and explain why alert( null || 2 && 3 || 4 );
+79. Write an if condition to check that age is NOT between 14 and 90 inclusively. Create two variants: the first one using NOT !, the second one – without it.
+80. Write the code which asks for a login with prompt.
 
+If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
+
+The password is checked as follows:
+
+If it equals “TheMaster”, then show “Welcome!”,
+Another string – show “Wrong password”,
+For an empty string or cancelled input, show “Canceled”
+
+81. What is Nullish coalescing operator '??' and how that works ?
+82. What is the result of a ?? b in words ?
+83. Write this ?? operator using not equal and and operator.
+84. What is the usecase of ?? ? 
+85. What is the difference between || and ?? operator ?
+86. What was the issue with || that ?? was introduced ?
+87. What is the precedence of ?? operator ?
+88. What do you need to keep in mind while using ?? with || or && ?
+89. 
