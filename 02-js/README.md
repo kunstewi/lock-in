@@ -1,4 +1,4 @@
-# Formatted Questions
+### Javascript Fundamentals
 
 1. Explain the full process of how js gets executed in the browser and explain the high level architecture of v8 engine.
 
@@ -322,4 +322,116 @@ switch (browser) {
 ``` 
 rewrite using if else.
 
+97. 
+```js
+let a = +prompt('a?', '');
 
+if (a == 0) {
+  alert( 0 );
+}
+if (a == 1) {
+  alert( 1 );
+}
+
+if (a == 2 || a == 3) {
+  alert( '2,3' );
+}
+```
+rewrite this if loop using switch.
+
+98. What if a function has an outer and inner same named variable, which variable will the function perform operations.
+
+99. What do you mean by variable shadowing ?
+
+100. So when we pass arguement into a function what actually the function does to get those parameters and what if we change the parameters inside the functions will it modify the original parameter or it's copy ?
+
+101. Difference between Parameter and Arguement ?
+
+102. What if a function is called but an arguement is not provided, what's the default value ?
+
+103. How to pass default values to function parameters that triggers when no value is provided for that parameter ? 
+
+104. What the default values could be in the function parameter ?
+
+105. How to achieve the same functionality of default parameter value without providing default value to the paramters ? (2 ways)
+
+106. Explain nullish coalescing character ?
+
+107. How the return keyword works in the function when to use it and when to not ? How many times we can use the return keyword ?
+
+108. What if you use return without a value, what happens to the function ?
+
+109. What a function with empty return or withot it returns ?
+
+110. 
+```js
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Did parents allow you?');
+  }
+}
+```
+rewrite this using ? or || 
+
+111. Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+```js
+pow(3, 2) = 3 * 3 = 9
+pow(3, 3) = 3 * 3 * 3 = 27
+pow(1, 100) = 1 * 1 * ...* 1 = 1
+```
+
+112. What are function expressions and why do they have semicolons at the end and when normal function declaration hasn't.
+
+113. What are callback functions ? Give example.
+
+114. What is confirm() method ?
+
+115. What are anonymous function and where are they used ?
+
+116. Explain the differences between function declaration and function expression ?
+
+117. Suppose we declare a function inside if, else or inside another function then we can't call the function from outside of the block, how to make the function declaration be available globally what approach can we take ?
+
+118. When to choose function declaration vs function expression ?
+
+119. Rewrite this using arrow function
+```js
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  function() { alert("You agreed."); },
+  function() { alert("You canceled the execution."); }
+);
+```
+
+### Code Quality
+
+120. What is JSDoc and how is it used ? Give an example.
+
+121. What is Mocha and explain the steps how it works ? Can you explain how Mocha and Chai related and how do they work together ?
+
+122. What is a specification or spec in testing ?
+
+123. What are the 3 main buildling blocks of a spec ?
+
+124. What the full developement flow looks like with spec and tests and implementation ?
+
+125. What Sinon library does ? 
+
+126. Explain describe, it and assert keyword in testing ?
+
+127. How do we extend the spec ? 
+
+128. What do you mean by polyfills in js ?
+
+129. What do you mean by transpilers ? 
+
+### Objects Basics
+
+130. 
