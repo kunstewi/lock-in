@@ -434,4 +434,88 @@ ask(
 
 ### Objects Basics
 
-130. 
+130. How many data types in js and what ?
+
+131. What are primitive and non primitive data types ?
+
+132. What do you mean by property in an object ?
+
+133. What are the types of key and value in property of an object ?
+
+134. What are the two syntax to create an empty object ?
+
+135. What is an object literal ?
+
+136. How can we access the property values of an object ? Adding, deleting, modifying and getting those values ?
+
+137. Can we use multiword property names if yes then how ?
+
+138. Should we add comma at the end of the last property ?
+
+139. For multiword property names the dot notation doesn't work to access the property, what should we do ?
+
+140. What is the difference between . notation and [] notation to access object properties and when to use which ?
+
+141. What is the flexibility in using [] syntax compared to the dot one ?
+
+142. make it work by using different notation.
+```js
+let user = {
+  name: "John",
+  age: 30
+};
+
+let key = "name";
+alert( user.key ) // undefined
+```
+
+143. What do you mean by computed properties ? Give example.
+
+144. Explain what do you mean by property value shorthand and when do we use them and how to use them ?
+
+145. Can you explain why can we use reserverd keywords such as let, for, return, if as key names in an object ?
+
+146. How to test whether a property exists in an object ?
+
+147. What is the role of "in" operator ? What it does and how is it used ? State the syntax.
+
+148. Why did we need the in keyword when we could check if a property is defined by trying to access it and see if it returns undefined ?
+
+149. Explain for what for in loop is used. Give the syntax.
+
+150. Are objects ordered ? How order is determined in objects ?
+
+151. Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
+
+152. 
+```js
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+```
+Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+If salaries is empty, then the result must be 0.
+
+153. 
+```js
+// before the call
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+multiplyNumeric(menu);
+
+// after the call
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
+```
+Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+
