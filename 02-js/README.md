@@ -551,3 +551,102 @@ Create a function multiplyNumeric(obj) that multiplies all numeric property valu
 168. What do you mean by circular reference in objects ?
 
 169. For what kind of properties structuredClone() method fails ?
+
+170. Give high level overview how memory management happens in js ?
+
+171. What happens when something is not needed any more? How does the JavaScript engine discover it and clean it up?
+
+172. Explain reachability in memory management of js.
+
+173. What do you mean by reachable values and can you give some examples ?
+
+174. What is the role of garbage collector in js engine and how that works ? Give a simple example of an object reference first only one reference then two reference to one object how garbage collection happens when we remove those references ?
+
+175. What are interlinked objects ? Explain circular reference.
+
+176. How does JavaScript pass objects to functions by reference? Demonstrate this by writing a function that: accepts two objects, mutates both by adding properties that reference each other, and returns a new object containing references to both inputs. eg. function marry(man, woman).
+
+177. What do you mean by unreachable island in js memory management, give one example.
+
+178. What is the basic garbage collection algorithm is called in js ?
+
+179. Explain the steps involved in garbage collection algorithm, how it does it ?
+
+180. Explain the concept of Generational Collection in js memory management.
+
+181. Explain the concept of Incremental Collection.
+
+182. Explain the concept of Idle Time Collection.
+
+183. What is a method in object ?
+
+184. State the shorter syntax for methods in js object literal.
+
+185. What is the this keyword, and for what is it used ? Give one example how it's used ?
+
+186. What is the problem in using outer variable name of the object to access it's properties in the methods of that object instead of using this ? Give one example showing the problem.
+
+187. What does it mean by "this" is not bound ?
+
+188. When the value of "this" is evaluated by js engine ?
+
+189. What if we call a function with "this" without an object at all, what would be the value of this ? In strict mode and In non strict mode ?
+
+190. What does it mean by normal functions have their own "this" and arrow function don't have their own "this" ?
+
+191. What does it mean by dynamic this and lexical this ?
+
+192. 
+```js
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref.name ); // What's the result? Explain the why.
+```
+
+193. Create an object calculator with three methods: read() prompts for two values and saves them as object properties with names a and b respectively. sum() returns the sum of saved values. mul() multiplies saved values and returns the result.
+```js
+let calculator = {
+  // ... your code ...
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+```
+
+194. There’s a ladder object that allows you to go up and down:
+```js
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+  }
+};
+```
+Now, if we need to make several calls in sequence, we can do it like this:
+```js
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep(); // 1
+ladder.down();
+ladder.showStep(); // 0
+```
+Modify the code of up, down, and showStep to make the calls chainable, like this:
+```js
+ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
+```
+
