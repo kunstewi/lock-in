@@ -700,5 +700,5 @@ alert(accumulator.value); // shows the sum of these values
 
 205. Explain optional chaining in js. Give an example.
 
-206. 
+
 
