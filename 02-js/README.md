@@ -650,3 +650,55 @@ Modify the code of up, down, and showStep to make the calls chainable, like this
 ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
 ```
 
+195. What are Constructor Functions ? What are its 2 conventions ? Give one example.
+
+196. What happens when a function is executed with new keyword ?
+
+197. Can any function be used as a constructor ?
+
+198. Inside a function, how we can check whether it was called with new or without it ?
+
+199. Do Constructors have a return statement ? Explain why ?
+
+200. What if a return is called inside a constructor function with an object ? What if the return is called with a Primitive ?
+
+201. Can we add methods using constructor function ? Give one example.
+
+202. Is it possible to create functions A and B so that new A() == new B()? If it is, then provide an example of their code.
+```js
+function A() { ... }
+function B() { ... }
+
+let a = new A();
+let b = new B();
+
+alert( a == b ); // true
+```
+
+203. Create a constructor function Calculator that creates objects with 3 methods: read() prompts for two values and saves them as object properties with names a and b respectively. sum() returns the sum of these properties. mul() returns the multiplication product of these properties.
+```js
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+```
+
+204. Create a constructor function Accumulator(startingValue). Object that it creates should:
+
+- Store the “current value” in the property value. The starting value is set to the argument of the constructor startingValue.
+- The read() method should use prompt to read a new number and add it to value.
+- In other words, the value property is the sum of all user-entered values with the initial value startingValue.
+```js
+let accumulator = new Accumulator(1); // initial value 1
+
+accumulator.read(); // adds the user-entered value
+accumulator.read(); // adds the user-entered value
+
+alert(accumulator.value); // shows the sum of these values
+```
+
+205. Explain optional chaining in js. Give an example.
+
+206. 
+
