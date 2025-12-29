@@ -764,5 +764,26 @@ alert(accumulator.value); // shows the sum of these values
 
 237. What do you mean by system symbols ?
 
+238. What happens when objects are added obj1 + obj2, subtracted obj1 - obj2 or printed using alert(obj)?
 
+239. Is there anything like objects type conversion to booleans ?
 
+240. What kind of type conversions are available with objects ?
+
+241. When numeric conversion happens for objects and when string conversion happens for objects give example for each.
+
+242. How does javascript decides which conversion to apply for objects ?
+
+243. What are the three variants of type conversion for objects ?
+
+244. What are called hints in js type conversions for objects ?
+
+245. What are three hints listed in js spec ? Explain each hint.
+
+246. What hint < > these operatos uses while comparing objects ?
+
+247. Explain the "default" hint in detail.
+
+248. How all objects implement default conversion, and what's different with Date object ?
+
+249. 
