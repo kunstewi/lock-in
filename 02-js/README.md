@@ -786,7 +786,22 @@ alert(accumulator.value); // shows the sum of these values
 
 248. How all objects implement default conversion, and what's different with Date object ?
 
-249. How javascript convert objects to primitive can you explain the high level of it ?
+249. How javascript convert objects to primitive can you explain the high level of it ? 3 steps.
 
-250. What are built in symbol methods, explain the built in symbol Symbol.toPrimitive.
+250. What are built in symbol methods, explain the built in symbol Symbol.toPrimitive. Explain the first step which is Symbol.toPrimitive() with example.
 
+251. If the method Symbol.toPrimitive() exixts what happens ?
+
+252. What if the method Symbol.toPrimitive() doesn't exist ?
+
+253. Explain the methods toString() and valueOf(). What they do and how they work ? and what they return ?
+
+254. Explain the role of toString() and valueOf() in the context of object to primitive conversion, when they take place and what they do ?
+
+255. What if toString and valueOf return an object ?
+
+256. Difference between toString and valueOf and Symbol.toString and Symbol.valueOf.
+
+257. Explain the object to primitive conversion algorithm summary.
+
+258. 
