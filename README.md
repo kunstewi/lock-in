@@ -85,127 +85,114 @@
 
 ## 📊 Progress Tracking
 
-Track your learning progress with these tools:
+### 🎯 Simple 3-Step Workflow
 
-### Quick Commands
+1. **Mark questions** in README files as you study: ✅ ⚠️ ❌
+2. **Run scanner**: `node scan-progress.js`
+3. **Done!** Progress automatically tracked
 
-```bash
-# Update your daily progress (easiest way)
-node daily-update.js
+---
 
-# View your progress dashboard
-node study-tracker.js
+### How to Mark Questions
 
-# Quick command-line update
-node update-progress.js <topic> +<number>
+Open any topic's README.md (e.g., `02-js/README.md`) and add markers:
+
+```markdown
+✅ 1. Explain how js gets executed in the browser  ← Completed/Understood
+⚠️ 2. What is a closure?                           ← Familiar/In Progress
+❌ 3. What is async/await?                         ← Need to Learn
 ```
 
-### Available Scripts
+**Marker Options:**
+- **Emojis** (recommended): `✅` `⚠️` `❌`
+- **Text**: `[DONE]` `[FAMILIAR]` `[TODO]`
+- **Checkboxes**: `- [x]` `- [~]` `- [ ]`
 
-#### 1. **`daily-update.js`** ⭐ Recommended for Daily Use
+---
 
-The simplest way to update your progress each day.
+### Available Commands
 
-```bash
-node daily-update.js
-```
+#### `scan-progress.js` ⭐ Main Tool
 
-**Features:**
-- Interactive prompts
-- Topic shortcuts (type `js` instead of `02-js`)
-- Automatically adds to your total
-- Shows updated progress immediately
-
-**Shortcuts:**
-- `js` → 02-js
-- `react` → 05-react
-- `node` → 03-node-express
-- `ts` → 07-typescript
-- `docker` → 12-docker
-- `k8s` → 21-kubernetes
-- `os` → 25-operating-systems
-- `networks` → 26-computer-networks
-
-#### 2. **`update-progress.js`** - Power User Mode
-
-Quick command-line updates for faster workflow.
+Automatically scans all README files and updates your progress.
 
 ```bash
-# Add 30 questions to JavaScript
-node update-progress.js 02-js +30
-
-# Add 30 completed, 10 in progress
-node update-progress.js 02-js +30 +10
-
-# Set exact numbers (50 completed, 10 in progress)
-node update-progress.js 02-js 50 10
-
-# Interactive mode with numbered list
-node update-progress.js
+# Scan and update progress
+node scan-progress.js
 
 # Show help
-node update-progress.js --help
+node scan-progress.js --help
 ```
 
-#### 3. **`study-tracker.js`** - Progress Dashboard
+**What it does:**
+- Counts all marked questions (✅ ⚠️ ❌)
+- Updates `progress.json` automatically
+- Shows progress dashboard
+- No manual counting needed!
 
-View your complete learning progress with beautiful visualization.
+#### `study-tracker.js` - View Dashboard
+
+See your complete progress anytime.
 
 ```bash
-# View progress dashboard
 node study-tracker.js
-
-# Update progress (interactive)
-node study-tracker.js update
 ```
 
 **Shows:**
-- Total questions: 17,501 across 28 topics
+- Total: 17,501 questions across 28 topics
 - Completion percentage
 - Visual progress bar
-- Topic-by-topic breakdown
+- Topic breakdown
 - Estimated completion date
-- Next milestone
 
-### Progress Data
-
-All progress is stored in `progress.json` and automatically loaded by the scripts.
-
-### Documentation
-
-- **`PROGRESS_QUICK_REF.md`** - Quick reference guide
-- **`PROGRESS_TRACKING.md`** - Complete documentation
-- **`STUDY_APPROACH.md`** - Learning strategy and study system
-- **`QUICK_START.md`** - Getting started guide
-- **`ROADMAP.md`** - Visual 12-month learning timeline
+---
 
 ### Daily Workflow
 
 ```bash
-# 1. Study your topics
-# 2. At end of session, update progress:
-node daily-update.js
+# 1. Study questions and mark them in README files
+# 2. Run scanner
+node scan-progress.js
 
-# 3. Commit your progress:
-git add progress.json
-git commit -m "Day X: Completed Y questions"
+# 3. Commit your progress
+git add .
+git commit -m "Day X: Studied Y questions"
 git push
 ```
 
-### Optional: Create Aliases
+---
 
-Add to your `~/.zshrc` or `~/.bashrc`:
+### Example
 
-```bash
-alias study-update='cd /Users/kanai/Projects/lock-in && node daily-update.js'
-alias study-progress='cd /Users/kanai/Projects/lock-in && node study-tracker.js'
+**Before studying** (`02-js/README.md`):
+```markdown
+1. What is JavaScript?
+2. What is a closure?
 ```
 
-Then simply run:
-```bash
-study-update    # Update progress
-study-progress  # View dashboard
+**After studying**:
+```markdown
+✅ 1. What is JavaScript?
+⚠️ 2. What is a closure?
 ```
+
+**Run scanner**:
+```bash
+$ node scan-progress.js
+
+📚 02-js                          ✅   1  ⚠️    1  ❌   0
+✅ Progress updated!
+```
+
+---
+
+### Tips
+
+- ✅ Use for questions you fully understand
+- ⚠️ Use for questions you partially understand  
+- ❌ Use for questions you haven't studied yet
+- Run `node scan-progress.js` daily
+- Commit marked README files to track progress over time
 
 ---
 
