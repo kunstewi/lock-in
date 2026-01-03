@@ -3,73 +3,73 @@
 - [x] 1. What is HTML? What does HTML stand for?
 - [x] 2. What is the purpose of HTML in web development?
 - [x] 3. What is the difference between HTML and HTML5?
-- [ ] 4. What are HTML elements? What are HTML tags?
-- [ ] 5. What is the difference between an opening tag and a closing tag?
-- [ ] 6. What are self-closing tags? Give 5 examples.
-- [ ] 7. What is the basic structure of an HTML document?
-- [ ] 8. What is the purpose of the `<!DOCTYPE html>` declaration?
-- [ ] 9. What happens if you don't include `<!DOCTYPE html>`?
-- [ ] 10. What is the `<html>` tag and what attribute should it have?
-- [ ] 11. What is the purpose of the `<head>` section?
-- [ ] 12. What is the purpose of the `<body>` section?
-- [ ] 13. What is the `<meta>` tag used for? Give 3 examples.
-- [ ] 14. What is the viewport meta tag and why is it important for responsive design?
-- [ ] 15. What is the charset meta tag? What is the recommended charset?
-- [ ] 16. What is the `<title>` tag and why is it important?
-- [ ] 17. What is the difference between `<title>` and `<h1>`?
-- [ ] 18. What are HTML attributes? Give examples.
+- [x] 4. What are HTML elements? What are HTML tags?
+- [x] 5. What is the difference between an opening tag and a closing tag?
+- [f] 6. What are self-closing tags? Give 5 examples.
+- [f] 7. What is the basic structure of an HTML document?
+- [x] 8. What is the purpose of the `<!DOCTYPE html>` declaration?
+- [x] 9. What happens if you don't include `<!DOCTYPE html>`?
+- [x] 10. What is the `<html>` tag and what attribute should it have?
+- [f] 11. What is the purpose of the `<head>` section?
+- [x] 12. What is the purpose of the `<body>` section?
+- [f] 13. What is the `<meta>` tag used for? Give 3 examples.
+- [f] 14. What is the viewport meta tag and why is it important for responsive design?
+- [f] 15. What is the charset meta tag? What is the recommended charset?
+- [x] 16. What is the `<title>` tag and why is it important?
+- [x] 17. What is the difference between `<title>` and `<h1>`?
+- [f] 18. What are HTML attributes? Give examples.
 - [ ] 19. What is the difference between an attribute and a property?
 - [ ] 20. What are boolean attributes? Give examples.
-- [ ] 21. What is the `id` attribute? Can multiple elements have the same id?
-- [ ] 22. What is the `class` attribute? Can multiple elements have the same class?
-- [ ] 23. What is the difference between `id` and `class`?
-- [ ] 24. What is the `style` attribute used for?
-- [ ] 25. What are data attributes? How do you create them?
-- [ ] 26. What is the purpose of the `lang` attribute in the `<html>` tag?
-- [ ] 27. What are HTML comments? How do you write them?
-- [ ] 28. What is the purpose of comments in HTML?
-- [ ] 29. Can you nest comments in HTML?
-- [ ] 30. What are semantic HTML elements? Why are they important?
+- [x] 21. What is the `id` attribute? Can multiple elements have the same id?
+- [x] 22. What is the `class` attribute? Can multiple elements have the same class?
+- [x] 23. What is the difference between `id` and `class`?
+- [x] 24. What is the `style` attribute used for?
+- [f] 25. What are data attributes? How do you create them?
+- [f] 26. What is the purpose of the `lang` attribute in the `<html>` tag?
+- [x] 27. What are HTML comments? How do you write them?
+- [x] 28. What is the purpose of comments in HTML?
+- [x] 29. Can you nest comments in HTML?
+- [f] 30. What are semantic HTML elements? Why are they important?
 
 ---
 
 ### Text Content & Formatting
 
-- [ ] 31. What are heading tags? How many levels are there?
-- [ ] 32. Why should you only use one `<h1>` per page?
-- [ ] 33. What is the `<p>` tag used for?
-- [ ] 34. What is the difference between `<strong>` and `<b>`?
-- [ ] 35. What is the difference between `<em>` and `<i>`?
-- [ ] 36. What is the `<mark>` tag used for?
-- [ ] 37. What is the `<small>` tag used for?
-- [ ] 38. What is the `<del>` tag used for?
-- [ ] 39. What is the `<ins>` tag used for?
-- [ ] 40. What is the `<sub>` tag used for?
-- [ ] 41. What is the `<sup>` tag used for?
-- [ ] 42. What is the `<br>` tag? Is it semantic?
-- [ ] 43. What is the `<hr>` tag used for?
-- [ ] 44. What is the `<pre>` tag? How does it preserve formatting?
-- [ ] 45. What is the `<code>` tag used for?
-- [ ] 46. What is the `<kbd>` tag used for?
-- [ ] 47. What is the `<samp>` tag used for?
-- [ ] 48. What is the `<var>` tag used for?
-- [ ] 49. What is the `<blockquote>` tag? What attribute should it have?
-- [ ] 50. What is the `<q>` tag used for?
-- [ ] 51. What is the `<cite>` tag used for?
+- [x] 31. What are heading tags? How many levels are there?
+- [f] 32. Why should you only use one `<h1>` per page?
+- [x] 33. What is the `<p>` tag used for?
+- [x] 34. What is the difference between `<strong>` and `<b>`?
+- [x] 35. What is the difference between `<em>` and `<i>`?
+- [x] 36. What is the `<mark>` tag used for?
+- [f] 37. What is the `<small>` tag used for?
+- [x] 38. What is the `<del>` tag used for?
+- [f] 39. What is the `<ins>` tag used for?
+- [x] 40. What is the `<sub>` tag used for?
+- [x] 41. What is the `<sup>` tag used for?
+- [f] 42. What is the `<br>` tag? Is it semantic?
+- [x] 43. What is the `<hr>` tag used for?
+- [x] 44. What is the `<pre>` tag? How does it preserve formatting?
+- [x] 45. What is the `<code>` tag used for?
+- [f] 46. What is the `<kbd>` tag used for?
+- [f] 47. What is the `<samp>` tag used for?
+- [f] 48. What is the `<var>` tag used for?
+- [f] 49. What is the `<blockquote>` tag? What attribute should it have?
+- [f] 50. What is the `<q>` tag used for?
+- [f] 51. What is the `<cite>` tag used for?
 - [ ] 52. What is the `<abbr>` tag? What attribute should it have?
-- [ ] 53. What is the `<address>` tag used for?
+- [f] 53. What is the `<address>` tag used for?
 - [ ] 54. What is the `<time>` tag? What is the `datetime` attribute?
-- [ ] 55. What is the difference between block-level and inline elements?
+- [f] 55. What is the difference between block-level and inline elements?
 
 ---
 
 ### Links & Navigation
 
-- [ ] 56. What is the `<a>` tag used for?
-- [ ] 57. What is the `href` attribute?
+- [x] 56. What is the `<a>` tag used for?
+- [x] 57. What is the `href` attribute?
 - [ ] 58. What is the difference between absolute and relative URLs?
-- [ ] 59. What does `href="#"` do?
-- [ ] 60. What does `href="#section-id"` do?
+- [f] 59. What does `href="#"` do?
+- [f] 60. What does `href="#section-id"` do?
 - [ ] 61. What is the `target` attribute? What are its values?
 - [ ] 62. What does `target="_blank"` do? What security issue does it have?
 - [ ] 63. What is the `rel` attribute? What is `rel="noopener noreferrer"`?

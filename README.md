@@ -211,16 +211,20 @@ The study tracker has been updated to show **daily progress** instead of milesto
 - ❌ Questions needed: 497
 
 ### After:
-- ✅ Questions Completed Today: 3
+- ✅ Questions Completed Today (Done + In Progress): 55
+  - Completed: 31
+  - In Progress: 24
 - ✅ Expected Questions Solved Till Date (200/day): 200
-- ✅ Your Progress: 3 ⚠️ (-197 vs expected)
+- ✅ Your Progress: 55 ⚠️ (-145 vs expected)
 
 ## How It Works
 
 ### 1. **Questions Completed Today**
-   - Tracks how many questions you've completed since yesterday
-   - Calculated by comparing today's total with yesterday's total
+   - Tracks how many questions you've worked on since yesterday
+   - **Includes both completed AND in-progress questions**
+   - Calculated by comparing today's total (completed + in-progress) with yesterday's total
    - Resets automatically each day
+   - Shows breakdown of completed vs in-progress
 
 ### 2. **Expected Questions Solved Till Date**
    - Based on 200 questions per day target
@@ -292,9 +296,11 @@ At 200 questions/day:
   - Weeks to completion: 13
   - Estimated completion: April 1, 2026
 
-Questions Completed Today: 3
+Questions Completed Today (Done + In Progress): 55
+  - Completed: 31
+  - In Progress: 24
 Expected Questions Solved Till Date (200/day): 200
-Your Progress: 3 ⚠️ (-197 vs expected)
+Your Progress: 55 ⚠️ (-145 vs expected)
 ```
 
 ## Tips
@@ -306,7 +312,8 @@ Your Progress: 3 ⚠️ (-197 vs expected)
 
 ## Technical Details
 
-- Daily progress is calculated by comparing today's total with yesterday's total
+- Daily progress is calculated by comparing today's total (completed + in-progress) with yesterday's total
+- Both completed and in-progress questions count toward your daily progress
 - The system automatically handles day transitions
 - Historical data is preserved in the `dailyLog` object
 - Start date is set automatically on first run (today's date)

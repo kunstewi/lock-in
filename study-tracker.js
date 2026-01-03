@@ -68,11 +68,13 @@ function calculateStats() {
 
     const percentComplete = ((totalCompleted / totalQuestions) * 100).toFixed(2);
     const percentInProgress = ((totalInProgress / totalQuestions) * 100).toFixed(2);
+    const totalWorkedOn = totalCompleted + totalInProgress; // Combined for daily tracking
 
     return {
         totalQuestions,
         totalCompleted,
         totalInProgress,
+        totalWorkedOn,
         percentComplete,
         percentInProgress,
     };
@@ -144,14 +146,16 @@ function displayProgress() {
 
     // Daily progress tracking
     const metadata = getMetadata();
-    const questionsCompletedToday = calculateTodayProgress(stats.totalCompleted, metadata);
+    const questionsCompletedToday = calculateTodayProgress(stats.totalWorkedOn, metadata);
     const expectedQuestionsToDate = calculateExpectedProgress(metadata.startDate, questionsPerDay);
-    const progressDifference = stats.totalCompleted - expectedQuestionsToDate;
+    const progressDifference = stats.totalWorkedOn - expectedQuestionsToDate;
     const statusEmoji = progressDifference >= 0 ? '✅' : '⚠️';
 
-    console.log(`Questions Completed Today: ${questionsCompletedToday}`);
+    console.log(`Questions Completed Today (Done + In Progress): ${questionsCompletedToday}`);
+    console.log(`  - Completed: ${stats.totalCompleted}`);
+    console.log(`  - In Progress: ${stats.totalInProgress}`);
     console.log(`Expected Questions Solved Till Date (${questionsPerDay}/day): ${expectedQuestionsToDate}`);
-    console.log(`Your Progress: ${stats.totalCompleted} ${statusEmoji} (${progressDifference >= 0 ? '+' : ''}${progressDifference} vs expected)\n`);
+    console.log(`Your Progress: ${stats.totalWorkedOn} ${statusEmoji} (${progressDifference >= 0 ? '+' : ''}${progressDifference} vs expected)\n`);
 }
 
 // Get estimated completion date
@@ -268,9 +272,9 @@ function updateProgress() {
                 // Save progress
                 fs.writeFileSync(progressFile, JSON.stringify(progress, null, 2));
 
-                // Update metadata for daily tracking
+                // Update metadata for daily tracking (using combined total)
                 const stats = calculateStats();
-                updateMetadata(stats.totalCompleted);
+                updateMetadata(stats.totalWorkedOn);
 
                 console.log('\n✅ Progress updated and saved!\n');
 
