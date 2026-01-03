@@ -964,3 +964,11 @@ alert( randomInteger(1, 5) ); // 1
 alert( randomInteger(1, 5) ); // 3
 alert( randomInteger(1, 5) ); // 5
 ```
+
+- [ ] 318. What is the internal format for Strings in js ? 
+
+- [ ] 319. Explain the difference between Strings in single quote, double quote and backticks ?
+
+- [ ] 320. Explain the advantages of using backticks.
+
+- [ ] 321. 

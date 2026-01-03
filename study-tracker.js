@@ -142,11 +142,16 @@ function displayProgress() {
     console.log(`  - Weeks to completion: ${weeksRemaining}`);
     console.log(`  - Estimated completion: ${getEstimatedDate(daysRemaining)}\n`);
 
-    // Next milestone
-    const nextMilestone = Math.ceil(stats.totalCompleted / 500) * 500;
-    const questionsToMilestone = nextMilestone - stats.totalCompleted;
-    console.log(`Next Milestone: ${nextMilestone} questions`);
-    console.log(`Questions needed: ${questionsToMilestone}\n`);
+    // Daily progress tracking
+    const metadata = getMetadata();
+    const questionsCompletedToday = calculateTodayProgress(stats.totalCompleted, metadata);
+    const expectedQuestionsToDate = calculateExpectedProgress(metadata.startDate, questionsPerDay);
+    const progressDifference = stats.totalCompleted - expectedQuestionsToDate;
+    const statusEmoji = progressDifference >= 0 ? '✅' : '⚠️';
+
+    console.log(`Questions Completed Today: ${questionsCompletedToday}`);
+    console.log(`Expected Questions Solved Till Date (${questionsPerDay}/day): ${expectedQuestionsToDate}`);
+    console.log(`Your Progress: ${stats.totalCompleted} ${statusEmoji} (${progressDifference >= 0 ? '+' : ''}${progressDifference} vs expected)\n`);
 }
 
 // Get estimated completion date
@@ -159,6 +164,70 @@ function getEstimatedDate(daysFromNow) {
         day: 'numeric',
     });
 }
+
+// Get or create metadata for progress tracking
+function getMetadata() {
+    const metadataFile = path.join(__dirname, 'progress-metadata.json');
+    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+
+    if (fs.existsSync(metadataFile)) {
+        const metadata = JSON.parse(fs.readFileSync(metadataFile, 'utf8'));
+        return metadata;
+    } else {
+        // Create initial metadata
+        const initialMetadata = {
+            startDate: today,
+            lastUpdated: today,
+            yesterdayTotal: 0,
+            dailyLog: {}
+        };
+        fs.writeFileSync(metadataFile, JSON.stringify(initialMetadata, null, 2));
+        return initialMetadata;
+    }
+}
+
+// Calculate questions completed today
+function calculateTodayProgress(currentTotal, metadata) {
+    const today = new Date().toISOString().split('T')[0];
+
+    // If last updated was today, use yesterday's total
+    if (metadata.lastUpdated === today) {
+        return currentTotal - (metadata.yesterdayTotal || 0);
+    } else {
+        // If it's a new day, assume yesterday's total was the last known total
+        return currentTotal - (metadata.dailyLog[metadata.lastUpdated] || 0);
+    }
+}
+
+// Calculate expected progress based on start date and questions per day
+function calculateExpectedProgress(startDate, questionsPerDay) {
+    const start = new Date(startDate);
+    const today = new Date();
+
+    // Calculate days since start (inclusive)
+    const daysSinceStart = Math.floor((today - start) / (1000 * 60 * 60 * 24)) + 1;
+
+    return Math.max(0, daysSinceStart * questionsPerDay);
+}
+
+// Update metadata when progress changes
+function updateMetadata(currentTotal) {
+    const metadataFile = path.join(__dirname, 'progress-metadata.json');
+    const today = new Date().toISOString().split('T')[0];
+    const metadata = getMetadata();
+
+    // If it's a new day, save yesterday's total
+    if (metadata.lastUpdated !== today) {
+        metadata.yesterdayTotal = metadata.dailyLog[metadata.lastUpdated] || 0;
+    }
+
+    // Update daily log and last updated date
+    metadata.dailyLog[today] = currentTotal;
+    metadata.lastUpdated = today;
+
+    fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
+}
+
 
 // Update progress (interactive)
 function updateProgress() {
@@ -198,6 +267,11 @@ function updateProgress() {
 
                 // Save progress
                 fs.writeFileSync(progressFile, JSON.stringify(progress, null, 2));
+
+                // Update metadata for daily tracking
+                const stats = calculateStats();
+                updateMetadata(stats.totalCompleted);
+
                 console.log('\n✅ Progress updated and saved!\n');
 
                 readline.close();

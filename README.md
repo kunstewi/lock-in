@@ -199,3 +199,114 @@ $ node scan-progress.js
 **Total Questions: 17,501 | Estimated Time: ~6 months at 100 Q/day**
 
 Start tracking your progress today! 🚀
+
+# Daily Progress Tracking - Implementation Guide
+
+## What Changed
+
+The study tracker has been updated to show **daily progress** instead of milestone tracking:
+
+### Before:
+- ❌ Next Milestone: 500 questions
+- ❌ Questions needed: 497
+
+### After:
+- ✅ Questions Completed Today: 3
+- ✅ Expected Questions Solved Till Date (200/day): 200
+- ✅ Your Progress: 3 ⚠️ (-197 vs expected)
+
+## How It Works
+
+### 1. **Questions Completed Today**
+   - Tracks how many questions you've completed since yesterday
+   - Calculated by comparing today's total with yesterday's total
+   - Resets automatically each day
+
+### 2. **Expected Questions Solved Till Date**
+   - Based on 200 questions per day target
+   - Calculated from your start date (automatically set when first run)
+   - Formula: `Days since start × 200`
+
+### 3. **Progress Indicator**
+   - ✅ Green checkmark: You're on track or ahead
+   - ⚠️ Warning: You're behind schedule
+   - Shows the difference: `(+50 vs expected)` or `(-197 vs expected)`
+
+## Files Created
+
+### `progress-metadata.json`
+Stores daily tracking information:
+```json
+{
+  "startDate": "2026-01-03",        // When you started tracking
+  "lastUpdated": "2026-01-03",      // Last time you updated progress
+  "yesterdayTotal": 0,              // Total questions as of yesterday
+  "dailyLog": {                     // Historical daily totals
+    "2026-01-03": 3,
+    "2026-01-04": 203
+  }
+}
+```
+
+## Usage
+
+### View Progress (same as before)
+```bash
+node study-tracker.js
+```
+
+### Update Progress (same as before)
+```bash
+node study-tracker.js update
+```
+
+When you update progress, the system automatically:
+1. Saves your progress to `progress.json`
+2. Updates the daily log in `progress-metadata.json`
+3. Calculates today's progress
+
+## Customization
+
+### Change Daily Target
+Edit line 134 in `study-tracker.js`:
+```javascript
+const questionsPerDay = 200; // Change this number
+```
+
+### Reset Start Date
+Edit `progress-metadata.json` and change the `startDate` field to your desired start date:
+```json
+{
+  "startDate": "2026-01-01",  // Your actual start date
+  ...
+}
+```
+
+## Example Output
+
+```
+💡 STUDY INSIGHTS
+
+At 200 questions/day:
+  - Days to completion: 88
+  - Weeks to completion: 13
+  - Estimated completion: April 1, 2026
+
+Questions Completed Today: 3
+Expected Questions Solved Till Date (200/day): 200
+Your Progress: 3 ⚠️ (-197 vs expected)
+```
+
+## Tips
+
+1. **Update daily**: Run `node study-tracker.js update` at the end of each study session
+2. **Track honestly**: The system works best when you update it regularly
+3. **Don't worry about being behind**: The tracker helps you see trends, not judge you
+4. **Adjust your target**: If 200/day is too much, change it to something sustainable
+
+## Technical Details
+
+- Daily progress is calculated by comparing today's total with yesterday's total
+- The system automatically handles day transitions
+- Historical data is preserved in the `dailyLog` object
+- Start date is set automatically on first run (today's date)
